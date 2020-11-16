@@ -1,0 +1,337 @@
+INFO - 2020/10/23 02:32 -- 0:00:00 - model: DeepFM
+                                     num_class: 2
+                                     valid_split: 0.1
+                                     num_dnn_layer: 4
+                                     hidden_size: 128
+                                     dropout_rate: 0.5
+                                     embed_dim: 8
+                                     device: GPU
+                                     batch_size_train: 500000
+                                     batch_size_dev: 100000
+                                     num_epochs: 1000
+                                     num_patience: 100
+                                     lr: 0.1
+                                     lr_decay: 0.9
+                                     lr_patience: 8
+                                     lr_monitor: dev_auc
+                                     optimizer: Adam
+                                     init_method: xavier_uniform_
+                                     random_seed: 0
+                                     from_pretrained: False
+                                     transfer_learning: False
+                                     use_bn: True
+                                     use_dnn: True
+                                     use_fm: True
+                                     fm_dense_cross: False
+                                     lr_reduce: True
+                                     EarlyStopping: True
+                                     test_run: False
+                                     shuffle_before_epoch: True
+                                     torch_device: cuda
+                                     result_dir: train_result/2020_1023_023233/
+                                     checkpoint_save: train_result/2020_1023_023233/model_checkpoint.pkl
+                                     model_save: train_result/2020_1023_023233/torch_model.pth
+INFO - 2020/10/23 02:32 -- 0:00:00 - Task PID code: 76366
+INFO - 2020/10/23 02:32 -- 0:00:00 - torch model and log file saved directory:
+INFO - 2020/10/23 02:32 -- 0:00:00 - /data1/xuwen/code/deepfm_v32_seq/train_result/2020_1023_023233/
+INFO - 2020/10/23 02:32 -- 0:00:00 - All used features in-order:
+INFO - 2020/10/23 02:32 -- 0:00:00 - 1: geek_position
+                                     2: geek_city
+                                     3: geek_major
+                                     4: boss_position
+                                     5: boss_city
+                                     6: geek_workyears
+                                     7: geek_degree
+                                     8: job_workyears
+                                     9: job_degree
+                                     10: boss_title_type
+                                     11: el
+                                     12: eh
+                                     13: geek_paddf_rate_7d
+                                     14: geek_success_times_7d
+                                     15: jl
+                                     16: jh
+                                     17: boss_min_chat_tdiff
+                                     18: job_min_active_tdiff
+                                     19: job_paddf_rate_7d
+                                     20: job_success_times_7d
+                                     21: boss_paddf_success_times_2d
+                                     22: boss_paddf_success_rate_2d
+                                     23: boss_paddf_pchat_rate_2d
+                                     24: boss_paddf_rate_2d
+                                     25: job_pas_addf_num_24h
+                                     26: job_paddf_success_times_2d
+                                     27: job_paddf_success_times_7d
+                                     28: job_paddf_rate_14d
+                                     29: job_success_times_2d
+                                     30: job_psuccess_times_7d
+                                     31: job_paddfchat_times_7d
+                                     32: job_type
+INFO - 2020/10/23 02:32 -- 0:00:00 - Train data dir:/data1/xuwen/dataset/qm_geek_rank_success_train_v32/
+INFO - 2020/10/23 02:32 -- 0:00:00 - Test data dir:/data1/xuwen/dataset/qm_geek_rank_success_test_v32/2020-10-20/
+INFO - 2020/10/23 02:36 -- 0:04:07 -  Train df memory used: 4.7082 GB.
+INFO - 2020/10/23 02:43 -- 0:11:25 - Sparse ID column indices for model: [0, 1, 2, 3, 4]
+INFO - 2020/10/23 02:43 -- 0:11:25 - Sparse Non-ID column indices for model: [5, 6, 7, 8, 9]
+INFO - 2020/10/23 02:43 -- 0:11:25 - Dense column indices for model: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+INFO - 2020/10/23 02:43 -- 0:11:25 - max index of each ID type categorical feature: [1234, 397, 2815, 1234, 397]
+INFO - 2020/10/23 02:43 -- 0:11:25 - max index of sequence features: 1234
+INFO - 2020/10/23 02:43 -- 0:11:25 - Building batch iters...
+INFO - 2020/10/23 02:43 -- 0:11:25 - Building model's network.
+INFO - 2020/10/23 02:44 -- 0:11:33 - New model builded, save initilized checkpoint to the path: train_result/2020_1023_023233/model_checkpoint.pkl
+INFO - 2020/10/23 02:44 -- 0:11:33 - save initilized model to the path: train_result/2020_1023_023233/torch_model.pth
+INFO - 2020/10/23 02:44 -- 0:11:33 - start to train
+INFO - 2020/10/23 02:44 -- 0:11:33 - number of train batch iters: 37
+INFO - 2020/10/23 02:45 -- 0:12:47 - 0th epoch finished, train loss: 0.5475041, train auc: 0.5537694, val loss: 0.2845635, val auc: 0.5491172
+INFO - 2020/10/23 02:46 -- 0:14:00 - 1th epoch finished, train loss: 0.5275543, train auc: 0.6103406, val loss: 0.2878341, val auc: 0.5491495
+INFO - 2020/10/23 02:47 -- 0:15:13 - 2th epoch finished, train loss: 0.5217002, train auc: 0.6370658, val loss: 0.3036243, val auc: 0.5556506
+INFO - 2020/10/23 02:49 -- 0:16:30 - 3th epoch finished, train loss: 0.5219036, train auc: 0.6349404, val loss: 0.3127778, val auc: 0.5537655
+INFO - 2020/10/23 02:50 -- 0:17:44 - 4th epoch finished, train loss: 0.5252982, train auc: 0.6200172, val loss: 0.3053076, val auc: 0.5563647
+INFO - 2020/10/23 02:51 -- 0:18:58 - 5th epoch finished, train loss: 0.5203196, train auc: 0.6497138, val loss: 0.3334143, val auc: 0.5522124
+INFO - 2020/10/23 02:52 -- 0:20:11 - 6th epoch finished, train loss: 0.5183125, train auc: 0.6620089, val loss: 0.3403049, val auc: 0.5534049
+INFO - 2020/10/23 02:53 -- 0:21:26 - 7th epoch finished, train loss: 0.5171401, train auc: 0.6618016, val loss: 0.4705083, val auc: 0.5546195
+INFO - 2020/10/23 02:55 -- 0:22:54 - 8th epoch finished, train loss: 0.5189215, train auc: 0.6490647, val loss: 0.345244, val auc: 0.5547223
+INFO - 2020/10/23 02:56 -- 0:24:11 - 9th epoch finished, train loss: 0.5203881, train auc: 0.6478121, val loss: 0.2564692, val auc: 0.5637318
+INFO - 2020/10/23 02:57 -- 0:25:25 - 10th epoch finished, train loss: 0.5205863, train auc: 0.64304, val loss: 0.3461071, val auc: 0.556564
+INFO - 2020/10/23 02:59 -- 0:26:39 - 11th epoch finished, train loss: 0.5132686, train auc: 0.667068, val loss: 0.3188707, val auc: 0.5596062
+INFO - 2020/10/23 03:00 -- 0:27:55 - 12th epoch finished, train loss: 0.5121562, train auc: 0.6667815, val loss: 0.3884585, val auc: 0.565727
+INFO - 2020/10/23 03:01 -- 0:29:09 - 13th epoch finished, train loss: 0.5095745, train auc: 0.6737608, val loss: 0.3381678, val auc: 0.5707695
+INFO - 2020/10/23 03:02 -- 0:30:24 - 14th epoch finished, train loss: 0.5124393, train auc: 0.669514, val loss: 0.3962232, val auc: 0.5664608
+INFO - 2020/10/23 03:04 -- 0:31:38 - 15th epoch finished, train loss: 0.5068069, train auc: 0.6835547, val loss: 0.3637482, val auc: 0.5808764
+INFO - 2020/10/23 03:05 -- 0:32:52 - 16th epoch finished, train loss: 0.4999055, train auc: 0.6972332, val loss: 0.3591802, val auc: 0.5827266
+INFO - 2020/10/23 03:06 -- 0:34:05 - 17th epoch finished, train loss: 0.498267, train auc: 0.7008887, val loss: 0.4339904, val auc: 0.5837685
+INFO - 2020/10/23 03:07 -- 0:35:19 - 18th epoch finished, train loss: 0.4975091, train auc: 0.702539, val loss: 0.3278822, val auc: 0.5849285
+INFO - 2020/10/23 03:09 -- 0:36:38 - 19th epoch finished, train loss: 0.4960472, train auc: 0.7056662, val loss: 0.4085974, val auc: 0.5863861
+INFO - 2020/10/23 03:10 -- 0:38:03 - 20th epoch finished, train loss: 0.496336, train auc: 0.7052604, val loss: 0.3929295, val auc: 0.5847424
+INFO - 2020/10/23 03:11 -- 0:39:25 - 21th epoch finished, train loss: 0.4947742, train auc: 0.7087543, val loss: 0.3654138, val auc: 0.5854527
+INFO - 2020/10/23 03:13 -- 0:40:41 - 22th epoch finished, train loss: 0.4933766, train auc: 0.7120555, val loss: 0.4394804, val auc: 0.5893067
+INFO - 2020/10/23 03:14 -- 0:42:02 - 23th epoch finished, train loss: 0.4923448, train auc: 0.7139717, val loss: 0.3047083, val auc: 0.5867928
+INFO - 2020/10/23 03:16 -- 0:43:45 - 24th epoch finished, train loss: 0.4931704, train auc: 0.7121654, val loss: 0.3740978, val auc: 0.5891494
+INFO - 2020/10/23 03:17 -- 0:45:26 - 25th epoch finished, train loss: 0.4923978, train auc: 0.7139393, val loss: 0.4034778, val auc: 0.5894276
+INFO - 2020/10/23 03:19 -- 0:46:59 - 26th epoch finished, train loss: 0.4900984, train auc: 0.718486, val loss: 0.4025373, val auc: 0.5913027
+INFO - 2020/10/23 03:20 -- 0:48:20 - 27th epoch finished, train loss: 0.4898085, train auc: 0.7191543, val loss: 0.4160288, val auc: 0.5921211
+INFO - 2020/10/23 03:22 -- 0:49:42 - 28th epoch finished, train loss: 0.4889886, train auc: 0.7208046, val loss: 0.3894465, val auc: 0.5919808
+INFO - 2020/10/23 03:23 -- 0:51:00 - 29th epoch finished, train loss: 0.4895758, train auc: 0.7201222, val loss: 0.3457534, val auc: 0.5901747
+INFO - 2020/10/23 03:24 -- 0:52:14 - 30th epoch finished, train loss: 0.488106, train auc: 0.7229355, val loss: 0.3902089, val auc: 0.5938169
+INFO - 2020/10/23 03:26 -- 0:53:27 - 31th epoch finished, train loss: 0.4865642, train auc: 0.725881, val loss: 0.4289377, val auc: 0.5972131
+INFO - 2020/10/23 03:27 -- 0:54:42 - 32th epoch finished, train loss: 0.4847301, train auc: 0.7299152, val loss: 0.2835167, val auc: 0.5948494
+INFO - 2020/10/23 03:28 -- 0:55:55 - 33th epoch finished, train loss: 0.4854789, train auc: 0.7289589, val loss: 0.2926496, val auc: 0.5979933
+INFO - 2020/10/23 03:29 -- 0:57:11 - 34th epoch finished, train loss: 0.4846875, train auc: 0.7301196, val loss: 0.2835859, val auc: 0.6006787
+INFO - 2020/10/23 03:30 -- 0:58:24 - 35th epoch finished, train loss: 0.4816517, train auc: 0.7354434, val loss: 0.3870865, val auc: 0.6059182
+INFO - 2020/10/23 03:32 -- 0:59:41 - 36th epoch finished, train loss: 0.4837068, train auc: 0.7315866, val loss: 0.3656132, val auc: 0.6077661
+INFO - 2020/10/23 03:33 -- 1:00:58 - 37th epoch finished, train loss: 0.4780872, train auc: 0.7418158, val loss: 0.4314992, val auc: 0.6129838
+INFO - 2020/10/23 03:34 -- 1:02:13 - 38th epoch finished, train loss: 0.4766599, train auc: 0.7440852, val loss: 0.3778578, val auc: 0.6158261
+INFO - 2020/10/23 03:36 -- 1:03:31 - 39th epoch finished, train loss: 0.476597, train auc: 0.7445144, val loss: 0.370274, val auc: 0.6154035
+INFO - 2020/10/23 03:37 -- 1:04:48 - 40th epoch finished, train loss: 0.4723632, train auc: 0.7516498, val loss: 0.4523363, val auc: 0.627479
+INFO - 2020/10/23 03:38 -- 1:06:07 - 41th epoch finished, train loss: 0.4709953, train auc: 0.75376, val loss: 0.2962202, val auc: 0.627288
+INFO - 2020/10/23 03:39 -- 1:07:25 - 42th epoch finished, train loss: 0.4690874, train auc: 0.7567776, val loss: 0.439549, val auc: 0.6343881
+INFO - 2020/10/23 03:41 -- 1:08:40 - 43th epoch finished, train loss: 0.4656285, train auc: 0.7618235, val loss: 0.3787986, val auc: 0.6358531
+INFO - 2020/10/23 03:42 -- 1:09:55 - 44th epoch finished, train loss: 0.4651242, train auc: 0.7625799, val loss: 0.3538132, val auc: 0.6373597
+INFO - 2020/10/23 03:43 -- 1:11:11 - 45th epoch finished, train loss: 0.4628323, train auc: 0.7659438, val loss: 0.4110554, val auc: 0.6425254
+INFO - 2020/10/23 03:45 -- 1:12:27 - 46th epoch finished, train loss: 0.4601005, train auc: 0.7703187, val loss: 0.4493453, val auc: 0.6450926
+INFO - 2020/10/23 03:46 -- 1:13:42 - 47th epoch finished, train loss: 0.4597447, train auc: 0.7705264, val loss: 0.4200071, val auc: 0.6472433
+INFO - 2020/10/23 03:47 -- 1:14:57 - 48th epoch finished, train loss: 0.4587322, train auc: 0.7722151, val loss: 0.3893469, val auc: 0.6490323
+INFO - 2020/10/23 03:48 -- 1:16:13 - 49th epoch finished, train loss: 0.4582795, train auc: 0.7727788, val loss: 0.3714042, val auc: 0.6496888
+INFO - 2020/10/23 03:50 -- 1:17:34 - 50th epoch finished, train loss: 0.4576032, train auc: 0.773608, val loss: 0.3719985, val auc: 0.6502628
+INFO - 2020/10/23 03:51 -- 1:18:51 - 51th epoch finished, train loss: 0.458205, train auc: 0.7726573, val loss: 0.3686962, val auc: 0.6519901
+INFO - 2020/10/23 03:52 -- 1:20:06 - 52th epoch finished, train loss: 0.4576419, train auc: 0.7733801, val loss: 0.3658526, val auc: 0.6520785
+INFO - 2020/10/23 03:53 -- 1:21:22 - 53th epoch finished, train loss: 0.4566991, train auc: 0.7748453, val loss: 0.4179654, val auc: 0.655829
+INFO - 2020/10/23 03:55 -- 1:22:37 - 54th epoch finished, train loss: 0.4748838, train auc: 0.7502301, val loss: 0.413687, val auc: 0.6393255
+INFO - 2020/10/23 03:56 -- 1:23:55 - 55th epoch finished, train loss: 0.4658719, train auc: 0.7609737, val loss: 0.3492707, val auc: 0.6574054
+INFO - 2020/10/23 03:57 -- 1:25:14 - 56th epoch finished, train loss: 0.4628036, train auc: 0.765972, val loss: 0.4135805, val auc: 0.6593499
+INFO - 2020/10/23 03:59 -- 1:26:31 - 57th epoch finished, train loss: 0.4618334, train auc: 0.7672009, val loss: 0.366131, val auc: 0.6584176
+INFO - 2020/10/23 04:00 -- 1:27:46 - 58th epoch finished, train loss: 0.4591887, train auc: 0.7713157, val loss: 0.4009866, val auc: 0.6600134
+INFO - 2020/10/23 04:01 -- 1:29:03 - 59th epoch finished, train loss: 0.4585068, train auc: 0.7723185, val loss: 0.4084728, val auc: 0.6609842
+INFO - 2020/10/23 04:02 -- 1:30:16 - 60th epoch finished, train loss: 0.4578512, train auc: 0.7731429, val loss: 0.398057, val auc: 0.6614154
+INFO - 2020/10/23 04:04 -- 1:31:27 - 61th epoch finished, train loss: 0.4590331, train auc: 0.7713474, val loss: 0.3730747, val auc: 0.6601815
+INFO - 2020/10/23 04:05 -- 1:32:39 - 62th epoch finished, train loss: 0.4570317, train auc: 0.774274, val loss: 0.3835067, val auc: 0.6622228
+INFO - 2020/10/23 04:06 -- 1:33:54 - 63th epoch finished, train loss: 0.4571932, train auc: 0.7737852, val loss: 0.3915893, val auc: 0.6622438
+INFO - 2020/10/23 04:07 -- 1:35:15 - 64th epoch finished, train loss: 0.4559686, train auc: 0.7756753, val loss: 0.3415242, val auc: 0.6622801
+INFO - 2020/10/23 04:09 -- 1:36:31 - 65th epoch finished, train loss: 0.4565528, train auc: 0.7748045, val loss: 0.3974808, val auc: 0.6637459
+INFO - 2020/10/23 04:10 -- 1:37:43 - 66th epoch finished, train loss: 0.4561603, train auc: 0.7752458, val loss: 0.4130555, val auc: 0.6635984
+INFO - 2020/10/23 04:11 -- 1:38:56 - 67th epoch finished, train loss: 0.456074, train auc: 0.7753138, val loss: 0.3788854, val auc: 0.6642244
+INFO - 2020/10/23 04:12 -- 1:40:09 - 68th epoch finished, train loss: 0.4559825, train auc: 0.7753653, val loss: 0.3948718, val auc: 0.6642917
+INFO - 2020/10/23 04:13 -- 1:41:25 - 69th epoch finished, train loss: 0.4560384, train auc: 0.7752559, val loss: 0.4347315, val auc: 0.6649927
+INFO - 2020/10/23 04:15 -- 1:42:38 - 70th epoch finished, train loss: 0.4556325, train auc: 0.7758722, val loss: 0.4018906, val auc: 0.6645751
+INFO - 2020/10/23 04:16 -- 1:43:50 - 71th epoch finished, train loss: 0.4561489, train auc: 0.7747748, val loss: 0.3832443, val auc: 0.6651832
+INFO - 2020/10/23 04:17 -- 1:45:02 - 72th epoch finished, train loss: 0.4558095, train auc: 0.7754796, val loss: 0.3748608, val auc: 0.6648094
+INFO - 2020/10/23 04:18 -- 1:46:16 - 73th epoch finished, train loss: 0.4547001, train auc: 0.7772649, val loss: 0.400991, val auc: 0.6660638
+INFO - 2020/10/23 04:20 -- 1:47:28 - 74th epoch finished, train loss: 0.4545324, train auc: 0.7771914, val loss: 0.374056, val auc: 0.6657804
+INFO - 2020/10/23 04:21 -- 1:48:48 - 75th epoch finished, train loss: 0.4545818, train auc: 0.7772044, val loss: 0.3764774, val auc: 0.6659831
+INFO - 2020/10/23 04:22 -- 1:50:01 - 76th epoch finished, train loss: 0.4551235, train auc: 0.7764934, val loss: 0.368635, val auc: 0.6652406
+INFO - 2020/10/23 04:23 -- 1:51:16 - 77th epoch finished, train loss: 0.4549701, train auc: 0.7765108, val loss: 0.4157609, val auc: 0.6666081
+INFO - 2020/10/23 04:25 -- 1:52:28 - 78th epoch finished, train loss: 0.4546427, train auc: 0.7770089, val loss: 0.4109437, val auc: 0.6673192
+INFO - 2020/10/23 04:26 -- 1:53:45 - 79th epoch finished, train loss: 0.4543805, train auc: 0.7774253, val loss: 0.3871384, val auc: 0.6669505
+INFO - 2020/10/23 04:27 -- 1:54:57 - 80th epoch finished, train loss: 0.4542907, train auc: 0.7772971, val loss: 0.3623053, val auc: 0.6666462
+INFO - 2020/10/23 04:28 -- 1:56:09 - 81th epoch finished, train loss: 0.4546984, train auc: 0.7767994, val loss: 0.3960128, val auc: 0.6676091
+INFO - 2020/10/23 04:30 -- 1:57:26 - 82th epoch finished, train loss: 0.4538231, train auc: 0.7780509, val loss: 0.3977532, val auc: 0.6676021
+INFO - 2020/10/23 04:31 -- 1:58:51 - 83th epoch finished, train loss: 0.4537116, train auc: 0.778112, val loss: 0.3821134, val auc: 0.6664743
+INFO - 2020/10/23 04:32 -- 2:00:02 - 84th epoch finished, train loss: 0.4534447, train auc: 0.7786434, val loss: 0.4060165, val auc: 0.6676556
+INFO - 2020/10/23 04:33 -- 2:01:13 - 85th epoch finished, train loss: 0.4537022, train auc: 0.7781711, val loss: 0.3624708, val auc: 0.6674539
+INFO - 2020/10/23 04:35 -- 2:02:28 - 86th epoch finished, train loss: 0.4542789, train auc: 0.7773718, val loss: 0.3677288, val auc: 0.6677197
+INFO - 2020/10/23 04:36 -- 2:03:40 - 87th epoch finished, train loss: 0.4533176, train auc: 0.7787868, val loss: 0.4183253, val auc: 0.6693645
+INFO - 2020/10/23 04:37 -- 2:04:52 - 88th epoch finished, train loss: 0.4539155, train auc: 0.7778898, val loss: 0.4246266, val auc: 0.6688243
+INFO - 2020/10/23 04:38 -- 2:06:05 - 89th epoch finished, train loss: 0.4538595, train auc: 0.77785, val loss: 0.4057764, val auc: 0.6688662
+INFO - 2020/10/23 04:39 -- 2:07:19 - 90th epoch finished, train loss: 0.4531891, train auc: 0.7789356, val loss: 0.3594409, val auc: 0.6683744
+INFO - 2020/10/23 04:41 -- 2:08:34 - 91th epoch finished, train loss: 0.452788, train auc: 0.7793951, val loss: 0.3994657, val auc: 0.6690105
+INFO - 2020/10/23 04:42 -- 2:09:48 - 92th epoch finished, train loss: 0.4526362, train auc: 0.7796667, val loss: 0.3974711, val auc: 0.6693566
+INFO - 2020/10/23 04:43 -- 2:11:00 - 93th epoch finished, train loss: 0.4529521, train auc: 0.779146, val loss: 0.3816785, val auc: 0.6690952
+INFO - 2020/10/23 04:44 -- 2:12:15 - 94th epoch finished, train loss: 0.4531357, train auc: 0.7788101, val loss: 0.3743076, val auc: 0.669238
+INFO - 2020/10/23 04:46 -- 2:13:30 - 95th epoch finished, train loss: 0.4531802, train auc: 0.7788442, val loss: 0.3892563, val auc: 0.668586
+INFO - 2020/10/23 04:47 -- 2:14:43 - 96th epoch finished, train loss: 0.452603, train auc: 0.7795182, val loss: 0.4052911, val auc: 0.669748
+INFO - 2020/10/23 04:48 -- 2:16:06 - 97th epoch finished, train loss: 0.4522957, train auc: 0.7799702, val loss: 0.3545684, val auc: 0.6694672
+INFO - 2020/10/23 04:49 -- 2:17:20 - 98th epoch finished, train loss: 0.4522598, train auc: 0.779885, val loss: 0.330178, val auc: 0.6679537
+INFO - 2020/10/23 04:51 -- 2:18:33 - 99th epoch finished, train loss: 0.4539255, train auc: 0.7776688, val loss: 0.3909193, val auc: 0.6698553
+INFO - 2020/10/23 04:52 -- 2:19:48 - 100th epoch finished, train loss: 0.4518351, train auc: 0.7806424, val loss: 0.376217, val auc: 0.6701132
+INFO - 2020/10/23 04:53 -- 2:21:04 - 101th epoch finished, train loss: 0.4517846, train auc: 0.7807316, val loss: 0.3669025, val auc: 0.6695509
+INFO - 2020/10/23 04:54 -- 2:22:17 - 102th epoch finished, train loss: 0.4519519, train auc: 0.7804405, val loss: 0.383201, val auc: 0.6702468
+INFO - 2020/10/23 04:56 -- 2:23:30 - 103th epoch finished, train loss: 0.4518938, train auc: 0.780531, val loss: 0.3781792, val auc: 0.6706607
+INFO - 2020/10/23 04:57 -- 2:24:42 - 104th epoch finished, train loss: 0.4514137, train auc: 0.7810973, val loss: 0.3916803, val auc: 0.6698018
+INFO - 2020/10/23 04:58 -- 2:25:57 - 105th epoch finished, train loss: 0.452272, train auc: 0.7800834, val loss: 0.4192142, val auc: 0.6709004
+INFO - 2020/10/23 04:59 -- 2:27:23 - 106th epoch finished, train loss: 0.4515536, train auc: 0.7807963, val loss: 0.3859572, val auc: 0.6713368
+INFO - 2020/10/23 05:01 -- 2:28:40 - 107th epoch finished, train loss: 0.4518597, train auc: 0.7805752, val loss: 0.3662121, val auc: 0.6704533
+INFO - 2020/10/23 05:02 -- 2:29:51 - 108th epoch finished, train loss: 0.4519855, train auc: 0.780421, val loss: 0.3688002, val auc: 0.6710206
+INFO - 2020/10/23 05:03 -- 2:31:06 - 109th epoch finished, train loss: 0.4511894, train auc: 0.7815531, val loss: 0.3938247, val auc: 0.6712167
+INFO - 2020/10/23 05:04 -- 2:32:23 - 110th epoch finished, train loss: 0.4509371, train auc: 0.7819141, val loss: 0.4036914, val auc: 0.6714649
+INFO - 2020/10/23 05:06 -- 2:33:38 - 111th epoch finished, train loss: 0.4509954, train auc: 0.7818508, val loss: 0.3513916, val auc: 0.6708132
+INFO - 2020/10/23 05:07 -- 2:34:50 - 112th epoch finished, train loss: 0.4517415, train auc: 0.7807356, val loss: 0.4015234, val auc: 0.6715555
+INFO - 2020/10/23 05:08 -- 2:36:02 - 113th epoch finished, train loss: 0.4511952, train auc: 0.7814821, val loss: 0.3941383, val auc: 0.6719354
+INFO - 2020/10/23 05:09 -- 2:37:13 - 114th epoch finished, train loss: 0.4507528, train auc: 0.7820914, val loss: 0.4038283, val auc: 0.6716569
+INFO - 2020/10/23 05:10 -- 2:38:25 - 115th epoch finished, train loss: 0.4508669, train auc: 0.7819392, val loss: 0.3679338, val auc: 0.6707937
+INFO - 2020/10/23 05:12 -- 2:39:39 - 116th epoch finished, train loss: 0.4511158, train auc: 0.7817166, val loss: 0.4383884, val auc: 0.6733415
+INFO - 2020/10/23 05:13 -- 2:41:15 - 117th epoch finished, train loss: 0.4511814, train auc: 0.7814647, val loss: 0.3746328, val auc: 0.6723233
+INFO - 2020/10/23 05:15 -- 2:42:33 - 118th epoch finished, train loss: 0.4502546, train auc: 0.7829034, val loss: 0.3822411, val auc: 0.6722002
+INFO - 2020/10/23 05:16 -- 2:43:47 - 119th epoch finished, train loss: 0.4500701, train auc: 0.7829862, val loss: 0.3732085, val auc: 0.6720206
+INFO - 2020/10/23 05:17 -- 2:44:58 - 120th epoch finished, train loss: 0.4502604, train auc: 0.7828346, val loss: 0.3846041, val auc: 0.6734112
+INFO - 2020/10/23 05:18 -- 2:46:15 - 121th epoch finished, train loss: 0.4502558, train auc: 0.7827738, val loss: 0.4053332, val auc: 0.6725525
+INFO - 2020/10/23 05:20 -- 2:47:27 - 122th epoch finished, train loss: 0.4500898, train auc: 0.7830622, val loss: 0.3714356, val auc: 0.6725937
+INFO - 2020/10/23 05:21 -- 2:48:38 - 123th epoch finished, train loss: 0.4501339, train auc: 0.7828521, val loss: 0.3916964, val auc: 0.6737925
+INFO - 2020/10/23 05:22 -- 2:49:50 - 124th epoch finished, train loss: 0.4497795, train auc: 0.7834267, val loss: 0.3870943, val auc: 0.6726777
+INFO - 2020/10/23 05:23 -- 2:51:05 - 125th epoch finished, train loss: 0.4500797, train auc: 0.7830132, val loss: 0.414335, val auc: 0.6740314
+INFO - 2020/10/23 05:24 -- 2:52:18 - 126th epoch finished, train loss: 0.4499056, train auc: 0.783206, val loss: 0.4006738, val auc: 0.6731883
+INFO - 2020/10/23 05:26 -- 2:53:29 - 127th epoch finished, train loss: 0.4492979, train auc: 0.7839323, val loss: 0.3670164, val auc: 0.6733995
+INFO - 2020/10/23 05:27 -- 2:54:40 - 128th epoch finished, train loss: 0.4494284, train auc: 0.7838556, val loss: 0.389264, val auc: 0.6739846
+INFO - 2020/10/23 05:28 -- 2:55:57 - 129th epoch finished, train loss: 0.4496381, train auc: 0.7835686, val loss: 0.370275, val auc: 0.6732708
+INFO - 2020/10/23 05:29 -- 2:57:11 - 130th epoch finished, train loss: 0.4493881, train auc: 0.7839408, val loss: 0.3532498, val auc: 0.6734286
+INFO - 2020/10/23 05:30 -- 2:58:26 - 131th epoch finished, train loss: 0.4499273, train auc: 0.7832336, val loss: 0.3803847, val auc: 0.6734658
+INFO - 2020/10/23 05:32 -- 2:59:40 - 132th epoch finished, train loss: 0.4492905, train auc: 0.7840582, val loss: 0.412325, val auc: 0.6743202
+INFO - 2020/10/23 05:33 -- 3:00:50 - 133th epoch finished, train loss: 0.4494229, train auc: 0.7838046, val loss: 0.3775582, val auc: 0.6738646
+INFO - 2020/10/23 05:34 -- 3:02:04 - 134th epoch finished, train loss: 0.4490209, train auc: 0.7843372, val loss: 0.3735679, val auc: 0.6740112
+INFO - 2020/10/23 05:35 -- 3:03:16 - 135th epoch finished, train loss: 0.4492558, train auc: 0.7840026, val loss: 0.3907843, val auc: 0.6755651
+INFO - 2020/10/23 05:37 -- 3:04:30 - 136th epoch finished, train loss: 0.4487944, train auc: 0.7845089, val loss: 0.369924, val auc: 0.6747674
+INFO - 2020/10/23 05:38 -- 3:05:44 - 137th epoch finished, train loss: 0.4488289, train auc: 0.7845994, val loss: 0.4134372, val auc: 0.6752006
+INFO - 2020/10/23 05:39 -- 3:06:57 - 138th epoch finished, train loss: 0.4489764, train auc: 0.7843724, val loss: 0.3997542, val auc: 0.6755806
+INFO - 2020/10/23 05:40 -- 3:08:10 - 139th epoch finished, train loss: 0.4487269, train auc: 0.7847306, val loss: 0.3880956, val auc: 0.6749452
+INFO - 2020/10/23 05:41 -- 3:09:24 - 140th epoch finished, train loss: 0.4489296, train auc: 0.7845583, val loss: 0.4034135, val auc: 0.6756803
+INFO - 2020/10/23 05:43 -- 3:10:38 - 141th epoch finished, train loss: 0.4485625, train auc: 0.7848195, val loss: 0.3752053, val auc: 0.674005
+INFO - 2020/10/23 05:44 -- 3:11:50 - 142th epoch finished, train loss: 0.4486936, train auc: 0.784669, val loss: 0.3796612, val auc: 0.6742337
+INFO - 2020/10/23 05:45 -- 3:13:03 - 143th epoch finished, train loss: 0.4483919, train auc: 0.7850905, val loss: 0.3819859, val auc: 0.6749259
+INFO - 2020/10/23 05:46 -- 3:14:16 - 144th epoch finished, train loss: 0.4488443, train auc: 0.7845436, val loss: 0.4065152, val auc: 0.6756926
+INFO - 2020/10/23 05:48 -- 3:15:33 - 145th epoch finished, train loss: 0.4483749, train auc: 0.7851389, val loss: 0.3832822, val auc: 0.6754873
+INFO - 2020/10/23 05:49 -- 3:16:48 - 146th epoch finished, train loss: 0.4483271, train auc: 0.7850887, val loss: 0.3862027, val auc: 0.6754861
+INFO - 2020/10/23 05:50 -- 3:18:04 - 147th epoch finished, train loss: 0.4486806, train auc: 0.784741, val loss: 0.3990685, val auc: 0.6759141
+INFO - 2020/10/23 05:51 -- 3:19:17 - 148th epoch finished, train loss: 0.4482057, train auc: 0.7853726, val loss: 0.3993268, val auc: 0.6755379
+INFO - 2020/10/23 05:53 -- 3:20:29 - 149th epoch finished, train loss: 0.4481441, train auc: 0.7854142, val loss: 0.3933503, val auc: 0.6752795
+INFO - 2020/10/23 05:54 -- 3:21:42 - 150th epoch finished, train loss: 0.4480928, train auc: 0.7854887, val loss: 0.3910162, val auc: 0.6763247
+INFO - 2020/10/23 05:55 -- 3:22:54 - 151th epoch finished, train loss: 0.4481804, train auc: 0.785367, val loss: 0.3934797, val auc: 0.6765482
+INFO - 2020/10/23 05:56 -- 3:24:08 - 152th epoch finished, train loss: 0.4483582, train auc: 0.7851315, val loss: 0.36023, val auc: 0.6754364
+INFO - 2020/10/23 05:57 -- 3:25:21 - 153th epoch finished, train loss: 0.4482999, train auc: 0.7852459, val loss: 0.3752314, val auc: 0.675091
+INFO - 2020/10/23 05:59 -- 3:26:34 - 154th epoch finished, train loss: 0.4480496, train auc: 0.7855482, val loss: 0.3917931, val auc: 0.6763737
+INFO - 2020/10/23 06:00 -- 3:27:50 - 155th epoch finished, train loss: 0.4478758, train auc: 0.7857284, val loss: 0.3753338, val auc: 0.67548
+INFO - 2020/10/23 06:01 -- 3:29:03 - 156th epoch finished, train loss: 0.4478647, train auc: 0.7858125, val loss: 0.3976091, val auc: 0.6759448
+INFO - 2020/10/23 06:02 -- 3:30:16 - 157th epoch finished, train loss: 0.4482268, train auc: 0.7853356, val loss: 0.3796445, val auc: 0.6758435
+INFO - 2020/10/23 06:04 -- 3:31:27 - 158th epoch finished, train loss: 0.4477522, train auc: 0.7859256, val loss: 0.4042043, val auc: 0.676672
+INFO - 2020/10/23 06:05 -- 3:32:40 - 159th epoch finished, train loss: 0.4481455, train auc: 0.785465, val loss: 0.3771549, val auc: 0.6760215
+INFO - 2020/10/23 06:06 -- 3:33:55 - 160th epoch finished, train loss: 0.4478585, train auc: 0.7858436, val loss: 0.3877485, val auc: 0.6750755
+INFO - 2020/10/23 06:07 -- 3:35:09 - 161th epoch finished, train loss: 0.4477624, train auc: 0.7858803, val loss: 0.3515729, val auc: 0.6756028
+INFO - 2020/10/23 06:08 -- 3:36:20 - 162th epoch finished, train loss: 0.4480701, train auc: 0.7856074, val loss: 0.3997968, val auc: 0.6773946
+INFO - 2020/10/23 06:10 -- 3:37:32 - 163th epoch finished, train loss: 0.4477485, train auc: 0.7859575, val loss: 0.3841711, val auc: 0.6766006
+INFO - 2020/10/23 06:11 -- 3:38:45 - 164th epoch finished, train loss: 0.4476462, train auc: 0.7861109, val loss: 0.3802481, val auc: 0.6764731
+INFO - 2020/10/23 06:12 -- 3:39:58 - 165th epoch finished, train loss: 0.4476366, train auc: 0.7860494, val loss: 0.4011864, val auc: 0.6761526
+INFO - 2020/10/23 06:13 -- 3:41:12 - 166th epoch finished, train loss: 0.4473949, train auc: 0.7863169, val loss: 0.3899579, val auc: 0.6760484
+INFO - 2020/10/23 06:14 -- 3:42:23 - 167th epoch finished, train loss: 0.4475461, train auc: 0.7862371, val loss: 0.3709372, val auc: 0.6761085
+INFO - 2020/10/23 06:16 -- 3:43:36 - 168th epoch finished, train loss: 0.4475613, train auc: 0.7862528, val loss: 0.3913063, val auc: 0.6762788
+INFO - 2020/10/23 06:17 -- 3:44:49 - 169th epoch finished, train loss: 0.4474958, train auc: 0.7863567, val loss: 0.3900024, val auc: 0.6758968
+INFO - 2020/10/23 06:18 -- 3:46:03 - 170th epoch finished, train loss: 0.4474889, train auc: 0.7863178, val loss: 0.3700409, val auc: 0.6749576
+INFO - 2020/10/23 06:19 -- 3:47:16 - 171th epoch finished, train loss: 0.4473873, train auc: 0.7864022, val loss: 0.3812777, val auc: 0.6762373
+INFO - 2020/10/23 06:21 -- 3:48:30 - 172th epoch finished, train loss: 0.4473839, train auc: 0.7864483, val loss: 0.3955393, val auc: 0.6759485
+INFO - 2020/10/23 06:22 -- 3:49:42 - 173th epoch finished, train loss: 0.4471999, train auc: 0.7865372, val loss: 0.3755812, val auc: 0.6750309
+INFO - 2020/10/23 06:23 -- 3:50:54 - 174th epoch finished, train loss: 0.4476479, train auc: 0.7862321, val loss: 0.39956, val auc: 0.6763785
+INFO - 2020/10/23 06:24 -- 3:52:09 - 175th epoch finished, train loss: 0.4473829, train auc: 0.7864593, val loss: 0.3803899, val auc: 0.6755111
+INFO - 2020/10/23 06:25 -- 3:53:23 - 176th epoch finished, train loss: 0.4473184, train auc: 0.7865932, val loss: 0.3810663, val auc: 0.6768206
+INFO - 2020/10/23 06:27 -- 3:54:39 - 177th epoch finished, train loss: 0.4473881, train auc: 0.7864294, val loss: 0.3822405, val auc: 0.6756695
+INFO - 2020/10/23 06:28 -- 3:55:53 - 178th epoch finished, train loss: 0.4471901, train auc: 0.7866411, val loss: 0.3822395, val auc: 0.6754467
+INFO - 2020/10/23 06:29 -- 3:57:05 - 179th epoch finished, train loss: 0.4471349, train auc: 0.7866884, val loss: 0.3786856, val auc: 0.6753874
+INFO - 2020/10/23 06:30 -- 3:58:20 - 180th epoch finished, train loss: 0.4472488, train auc: 0.7865357, val loss: 0.3962598, val auc: 0.6759887
+INFO - 2020/10/23 06:32 -- 3:59:35 - 181th epoch finished, train loss: 0.4470132, train auc: 0.786927, val loss: 0.3729818, val auc: 0.6764901
+INFO - 2020/10/23 06:33 -- 4:00:48 - 182th epoch finished, train loss: 0.4469854, train auc: 0.786917, val loss: 0.3909748, val auc: 0.6766448
+INFO - 2020/10/23 06:34 -- 4:02:03 - 183th epoch finished, train loss: 0.4469237, train auc: 0.7869672, val loss: 0.3713785, val auc: 0.6763523
+INFO - 2020/10/23 06:35 -- 4:03:16 - 184th epoch finished, train loss: 0.4469166, train auc: 0.7869236, val loss: 0.3952443, val auc: 0.6770935
+INFO - 2020/10/23 06:37 -- 4:04:30 - 185th epoch finished, train loss: 0.4470586, train auc: 0.7868131, val loss: 0.391281, val auc: 0.6760282
+INFO - 2020/10/23 06:38 -- 4:05:43 - 186th epoch finished, train loss: 0.4468979, train auc: 0.7869456, val loss: 0.3937993, val auc: 0.6760233
+INFO - 2020/10/23 06:39 -- 4:06:58 - 187th epoch finished, train loss: 0.4468803, train auc: 0.7869901, val loss: 0.3656402, val auc: 0.6760226
+INFO - 2020/10/23 06:40 -- 4:08:09 - 188th epoch finished, train loss: 0.4471965, train auc: 0.7867415, val loss: 0.4154795, val auc: 0.676811
+INFO - 2020/10/23 06:41 -- 4:09:22 - 189th epoch finished, train loss: 0.447176, train auc: 0.7865998, val loss: 0.3892664, val auc: 0.6762428
+INFO - 2020/10/23 06:43 -- 4:10:36 - 190th epoch finished, train loss: 0.4466666, train auc: 0.7872486, val loss: 0.3714831, val auc: 0.6758139
+INFO - 2020/10/23 06:44 -- 4:11:48 - 191th epoch finished, train loss: 0.446917, train auc: 0.7869867, val loss: 0.370191, val auc: 0.6759859
+INFO - 2020/10/23 06:45 -- 4:13:01 - 192th epoch finished, train loss: 0.44663, train auc: 0.7872716, val loss: 0.3763369, val auc: 0.6767395
+INFO - 2020/10/23 06:46 -- 4:14:15 - 193th epoch finished, train loss: 0.4468958, train auc: 0.7871658, val loss: 0.383555, val auc: 0.6771763
+INFO - 2020/10/23 06:48 -- 4:15:28 - 194th epoch finished, train loss: 0.446655, train auc: 0.7872646, val loss: 0.3887921, val auc: 0.6762899
+INFO - 2020/10/23 06:49 -- 4:16:39 - 195th epoch finished, train loss: 0.4465633, train auc: 0.787395, val loss: 0.4022007, val auc: 0.6767725
+INFO - 2020/10/23 06:50 -- 4:18:00 - 196th epoch finished, train loss: 0.4466766, train auc: 0.7873057, val loss: 0.3952999, val auc: 0.6765639
+INFO - 2020/10/23 06:51 -- 4:19:11 - 197th epoch finished, train loss: 0.4465377, train auc: 0.7873701, val loss: 0.3747878, val auc: 0.6761033
+INFO - 2020/10/23 06:52 -- 4:20:24 - 198th epoch finished, train loss: 0.4465575, train auc: 0.7872893, val loss: 0.3747515, val auc: 0.6769274
+INFO - 2020/10/23 06:54 -- 4:21:37 - 199th epoch finished, train loss: 0.4466138, train auc: 0.7873917, val loss: 0.3887929, val auc: 0.6755575
+INFO - 2020/10/23 06:55 -- 4:22:50 - 200th epoch finished, train loss: 0.4464153, train auc: 0.7875396, val loss: 0.3717791, val auc: 0.6764095
+INFO - 2020/10/23 06:56 -- 4:24:02 - 201th epoch finished, train loss: 0.4465117, train auc: 0.7875228, val loss: 0.3741648, val auc: 0.6764167
+INFO - 2020/10/23 06:57 -- 4:25:14 - 202th epoch finished, train loss: 0.4465323, train auc: 0.7874826, val loss: 0.3742256, val auc: 0.6764614
+INFO - 2020/10/23 06:59 -- 4:26:26 - 203th epoch finished, train loss: 0.4464146, train auc: 0.7875575, val loss: 0.3999223, val auc: 0.6759468
+INFO - 2020/10/23 07:00 -- 4:27:42 - 204th epoch finished, train loss: 0.446383, train auc: 0.7876466, val loss: 0.3871034, val auc: 0.677386
+INFO - 2020/10/23 07:01 -- 4:28:56 - 205th epoch finished, train loss: 0.4462724, train auc: 0.7876032, val loss: 0.3732403, val auc: 0.677074
+INFO - 2020/10/23 07:02 -- 4:30:10 - 206th epoch finished, train loss: 0.4464189, train auc: 0.7874798, val loss: 0.3868499, val auc: 0.6753529
+INFO - 2020/10/23 07:03 -- 4:31:22 - 207th epoch finished, train loss: 0.4464282, train auc: 0.7876028, val loss: 0.4113768, val auc: 0.6762561
+INFO - 2020/10/23 07:05 -- 4:32:34 - 208th epoch finished, train loss: 0.4463641, train auc: 0.787707, val loss: 0.3816995, val auc: 0.6767017
+INFO - 2020/10/23 07:06 -- 4:33:45 - 209th epoch finished, train loss: 0.4462865, train auc: 0.7877854, val loss: 0.4011942, val auc: 0.6766808
+INFO - 2020/10/23 07:07 -- 4:34:56 - 210th epoch finished, train loss: 0.4463534, train auc: 0.787762, val loss: 0.3913586, val auc: 0.676707
+INFO - 2020/10/23 07:08 -- 4:36:06 - 211th epoch finished, train loss: 0.4461506, train auc: 0.7878982, val loss: 0.397187, val auc: 0.6760383
+INFO - 2020/10/23 07:09 -- 4:37:21 - 212th epoch finished, train loss: 0.4462532, train auc: 0.7878744, val loss: 0.3882969, val auc: 0.6763184
+INFO - 2020/10/23 07:11 -- 4:38:36 - 213th epoch finished, train loss: 0.4462845, train auc: 0.7878894, val loss: 0.3934023, val auc: 0.6772341
+INFO - 2020/10/23 07:12 -- 4:39:50 - 214th epoch finished, train loss: 0.4462307, train auc: 0.7879859, val loss: 0.3841287, val auc: 0.6769086
+INFO - 2020/10/23 07:13 -- 4:41:01 - 215th epoch finished, train loss: 0.4461887, train auc: 0.7879966, val loss: 0.3901076, val auc: 0.6766936
+INFO - 2020/10/23 07:14 -- 4:42:13 - 216th epoch finished, train loss: 0.4461486, train auc: 0.7879876, val loss: 0.3937429, val auc: 0.6772203
+INFO - 2020/10/23 07:15 -- 4:43:26 - 217th epoch finished, train loss: 0.4461371, train auc: 0.7880451, val loss: 0.377972, val auc: 0.6768069
+INFO - 2020/10/23 07:17 -- 4:44:38 - 218th epoch finished, train loss: 0.4462098, train auc: 0.7879161, val loss: 0.3784209, val auc: 0.6773749
+INFO - 2020/10/23 07:18 -- 4:45:52 - 219th epoch finished, train loss: 0.4461243, train auc: 0.7879491, val loss: 0.3959199, val auc: 0.6767442
+INFO - 2020/10/23 07:19 -- 4:47:03 - 220th epoch finished, train loss: 0.4460362, train auc: 0.7880643, val loss: 0.3938261, val auc: 0.6768446
+INFO - 2020/10/23 07:20 -- 4:48:16 - 221th epoch finished, train loss: 0.4459448, train auc: 0.7880928, val loss: 0.378009, val auc: 0.6764435
+INFO - 2020/10/23 07:22 -- 4:49:29 - 222th epoch finished, train loss: 0.4461093, train auc: 0.7880484, val loss: 0.3793301, val auc: 0.6769805
+INFO - 2020/10/23 07:23 -- 4:50:42 - 223th epoch finished, train loss: 0.4459792, train auc: 0.7881826, val loss: 0.3830969, val auc: 0.6771567
+INFO - 2020/10/23 07:24 -- 4:51:54 - 224th epoch finished, train loss: 0.4459237, train auc: 0.788191, val loss: 0.3879995, val auc: 0.6763363
+INFO - 2020/10/23 07:25 -- 4:53:07 - 225th epoch finished, train loss: 0.4460103, train auc: 0.7881511, val loss: 0.3798054, val auc: 0.6770394
+INFO - 2020/10/23 07:26 -- 4:54:20 - 226th epoch finished, train loss: 0.4459633, train auc: 0.7881196, val loss: 0.3866862, val auc: 0.6768043
+INFO - 2020/10/23 07:28 -- 4:55:35 - 227th epoch finished, train loss: 0.4457963, train auc: 0.7882389, val loss: 0.3784502, val auc: 0.6771039
+INFO - 2020/10/23 07:29 -- 4:57:00 - 228th epoch finished, train loss: 0.4458656, train auc: 0.788354, val loss: 0.3851731, val auc: 0.6770587
+INFO - 2020/10/23 07:30 -- 4:58:13 - 229th epoch finished, train loss: 0.4459407, train auc: 0.7882695, val loss: 0.3985526, val auc: 0.6759419
+INFO - 2020/10/23 07:31 -- 4:59:26 - 230th epoch finished, train loss: 0.4458848, train auc: 0.7883381, val loss: 0.3828783, val auc: 0.6768626
+INFO - 2020/10/23 07:33 -- 5:00:45 - 231th epoch finished, train loss: 0.4458085, train auc: 0.7884008, val loss: 0.3896424, val auc: 0.6765985
+INFO - 2020/10/23 07:34 -- 5:02:01 - 232th epoch finished, train loss: 0.445706, train auc: 0.7884135, val loss: 0.3902809, val auc: 0.6762586
+INFO - 2020/10/23 07:35 -- 5:03:14 - 233th epoch finished, train loss: 0.4459324, train auc: 0.7883752, val loss: 0.3943952, val auc: 0.6766812
+INFO - 2020/10/23 07:37 -- 5:04:27 - 234th epoch finished, train loss: 0.4458923, train auc: 0.78829, val loss: 0.4014562, val auc: 0.677021
+INFO - 2020/10/23 07:38 -- 5:05:42 - 235th epoch finished, train loss: 0.4457689, train auc: 0.7884035, val loss: 0.3820011, val auc: 0.6773862
+INFO - 2020/10/23 07:39 -- 5:06:54 - 236th epoch finished, train loss: 0.4456918, train auc: 0.7884747, val loss: 0.3828451, val auc: 0.6761447
+INFO - 2020/10/23 07:40 -- 5:08:08 - 237th epoch finished, train loss: 0.4456705, train auc: 0.7885175, val loss: 0.382581, val auc: 0.6766207
+INFO - 2020/10/23 07:41 -- 5:09:21 - 238th epoch finished, train loss: 0.445713, train auc: 0.7885595, val loss: 0.4020807, val auc: 0.676717
+INFO - 2020/10/23 07:43 -- 5:10:33 - 239th epoch finished, train loss: 0.4458126, train auc: 0.7884498, val loss: 0.4059609, val auc: 0.6762021
+INFO - 2020/10/23 07:44 -- 5:11:44 - 240th epoch finished, train loss: 0.4456419, train auc: 0.7885714, val loss: 0.3797272, val auc: 0.6773403
+INFO - 2020/10/23 07:45 -- 5:12:58 - 241th epoch finished, train loss: 0.445713, train auc: 0.7884861, val loss: 0.3970431, val auc: 0.6771886
+INFO - 2020/10/23 07:46 -- 5:14:09 - 242th epoch finished, train loss: 0.4455783, train auc: 0.7886819, val loss: 0.3802466, val auc: 0.6772428
+INFO - 2020/10/23 07:47 -- 5:15:21 - 243th epoch finished, train loss: 0.4455003, train auc: 0.7887204, val loss: 0.3828636, val auc: 0.6763687
+INFO - 2020/10/23 07:49 -- 5:16:32 - 244th epoch finished, train loss: 0.4455891, train auc: 0.7886246, val loss: 0.3914077, val auc: 0.6771554
+INFO - 2020/10/23 07:50 -- 5:17:44 - 245th epoch finished, train loss: 0.445503, train auc: 0.788746, val loss: 0.395443, val auc: 0.67658
+INFO - 2020/10/23 07:50 -- 5:17:44 - ======================================================================
+INFO - 2020/10/23 07:50 -- 5:17:44 - Early Stopping triggered after 246 epoches, calculating test accuracy...
+INFO - 2020/10/23 07:50 -- 5:17:44 - Current meomory used before delete train and dev: 22.698441 GB
+INFO - 2020/10/23 07:50 -- 5:17:45 - Current meomory after delete train and dev: 2.494759 GB
+INFO - 2020/10/23 07:51 -- 5:19:05 - test loss:0.3996682, test auc: 0.6735515 .
+INFO - 2020/10/23 07:51 -- 5:19:05 - Saving onnx model...
+INFO - 2020/10/23 07:51 -- 5:19:08 - Final torch model and log file saved directory:
+INFO - 2020/10/23 07:51 -- 5:19:08 - /data1/xuwen/code/deepfm_v32_seq/train_result/2020_1023_023233/

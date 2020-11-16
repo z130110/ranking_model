@@ -1,0 +1,405 @@
+nohup: ignoring input
+INFO - 2020/10/22 07:41 -- 0:00:00 - model: DeepFM
+                                     num_class: 2
+                                     valid_split: 0.1
+                                     num_dnn_layer: 4
+                                     hidden_size: 128
+                                     dropout_rate: 0.5
+                                     embed_dim: 8
+                                     device: GPU
+                                     batch_size_train: 500000
+                                     batch_size_dev: 100000
+                                     num_epochs: 200
+                                     num_patience: 30
+                                     lr: 0.001
+                                     lr_decay: 0.8
+                                     lr_patience: 5
+                                     lr_monitor: dev_auc
+                                     optimizer: Adam
+                                     init_method: xavier_uniform_
+                                     random_seed: 0
+                                     from_pretrained: False
+                                     transfer_learning: False
+                                     use_bn: True
+                                     use_dnn: True
+                                     use_fm: True
+                                     fm_dense_cross: False
+                                     lr_reduce: True
+                                     EarlyStopping: True
+                                     test_run: False
+                                     shuffle_before_epoch: True
+                                     torch_device: cuda
+                                     result_dir: train_result/2020_1022_074145/
+                                     checkpoint_save: train_result/2020_1022_074145/model_checkpoint.pkl
+                                     model_save: train_result/2020_1022_074145/torch_model.pth
+INFO - 2020/10/22 07:41 -- 0:00:00 - Task PID code: 3694
+INFO - 2020/10/22 07:41 -- 0:00:00 - torch model and log file saved directory:
+INFO - 2020/10/22 07:41 -- 0:00:00 - /data1/xuwen/code/deepfm_v32_seq/train_result/2020_1022_074145/
+INFO - 2020/10/22 07:41 -- 0:00:00 - All used features in-order:
+INFO - 2020/10/22 07:41 -- 0:00:00 - 1: geek_position
+                                     2: geek_city
+                                     3: geek_major
+                                     4: boss_position
+                                     5: boss_city
+                                     6: geek_workyears
+                                     7: geek_degree
+                                     8: job_workyears
+                                     9: job_degree
+                                     10: boss_title_type
+                                     11: el
+                                     12: eh
+                                     13: geek_paddf_rate_7d
+                                     14: geek_success_times_7d
+                                     15: jl
+                                     16: jh
+                                     17: boss_min_chat_tdiff
+                                     18: job_min_active_tdiff
+                                     19: job_paddf_rate_7d
+                                     20: job_success_times_7d
+                                     21: boss_paddf_success_times_2d
+                                     22: boss_paddf_success_rate_2d
+                                     23: boss_paddf_pchat_rate_2d
+                                     24: boss_paddf_rate_2d
+                                     25: job_pas_addf_num_24h
+                                     26: job_paddf_success_times_2d
+                                     27: job_paddf_success_times_7d
+                                     28: job_paddf_rate_14d
+                                     29: job_success_times_2d
+                                     30: job_psuccess_times_7d
+                                     31: job_paddfchat_times_7d
+                                     32: job_type
+INFO - 2020/10/22 07:41 -- 0:00:00 - Train data dir:/data1/xuwen/dataset/qm_geek_rank_success_train_v32/
+INFO - 2020/10/22 07:41 -- 0:00:00 - Test data dir:/data1/xuwen/dataset/qm_geek_rank_success_test_v32/2020-10-20/
+INFO - 2020/10/22 07:43 -- 0:02:06 -  Train df memory used: 4.7082 GB.
+INFO - 2020/10/22 07:51 -- 0:10:08 - Sparse ID column indices for model: [0, 1, 2, 3, 4]
+INFO - 2020/10/22 07:51 -- 0:10:08 - Sparse Non-ID column indices for model: [5, 6, 7, 8, 9]
+INFO - 2020/10/22 07:51 -- 0:10:08 - Dense column indices for model: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+INFO - 2020/10/22 07:51 -- 0:10:08 - max index of each ID type categorical feature: [1234, 397, 2815, 1234, 397]
+INFO - 2020/10/22 07:51 -- 0:10:08 - max index of sequence features: 1234
+INFO - 2020/10/22 07:51 -- 0:10:08 - Building batch iters...
+INFO - 2020/10/22 07:51 -- 0:10:08 - Building model's network.
+INFO - 2020/10/22 07:52 -- 0:10:15 - New model builded, save initilized checkpoint to the path: train_result/2020_1022_074145/model_checkpoint.pkl
+INFO - 2020/10/22 07:52 -- 0:10:15 - save initilized model to the path: train_result/2020_1022_074145/torch_model.pth
+INFO - 2020/10/22 07:52 -- 0:10:15 - start to train
+INFO - 2020/10/22 07:52 -- 0:10:15 - number of train batch iters: 37
+INFO - 2020/10/22 07:53 -- 0:11:36 - 0th epoch finished, train loss: 0.6849214, train auc: 0.5182219, val loss: 0.6059059, val auc: 0.4886413
+INFO - 2020/10/22 07:54 -- 0:12:49 - 1th epoch finished, train loss: 0.5467566, train auc: 0.5579997, val loss: 0.3049225, val auc: 0.5462353
+INFO - 2020/10/22 07:55 -- 0:14:00 - 2th epoch finished, train loss: 0.5242171, train auc: 0.6398074, val loss: 0.3238398, val auc: 0.5478626
+INFO - 2020/10/22 07:56 -- 0:15:13 - 3th epoch finished, train loss: 0.5208395, train auc: 0.6540162, val loss: 0.3308958, val auc: 0.5492292
+INFO - 2020/10/22 07:58 -- 0:16:26 - 4th epoch finished, train loss: 0.5195714, train auc: 0.6588582, val loss: 0.333711, val auc: 0.5500419
+INFO - 2020/10/22 07:59 -- 0:17:38 - 5th epoch finished, train loss: 0.5187363, train auc: 0.6601355, val loss: 0.3347147, val auc: 0.5506256
+INFO - 2020/10/22 08:00 -- 0:18:51 - 6th epoch finished, train loss: 0.5180742, train auc: 0.6614801, val loss: 0.3400536, val auc: 0.5510772
+INFO - 2020/10/22 08:01 -- 0:20:05 - 7th epoch finished, train loss: 0.5171327, train auc: 0.6623301, val loss: 0.336707, val auc: 0.5513242
+INFO - 2020/10/22 08:03 -- 0:21:17 - 8th epoch finished, train loss: 0.5160424, train auc: 0.6617415, val loss: 0.3401691, val auc: 0.5514884
+INFO - 2020/10/22 08:04 -- 0:22:32 - 9th epoch finished, train loss: 0.5152948, train auc: 0.6625485, val loss: 0.3475023, val auc: 0.5516231
+INFO - 2020/10/22 08:05 -- 0:23:45 - 10th epoch finished, train loss: 0.5149232, train auc: 0.6630751, val loss: 0.3537023, val auc: 0.5517529
+INFO - 2020/10/22 08:06 -- 0:24:58 - 11th epoch finished, train loss: 0.5143725, train auc: 0.6635919, val loss: 0.3491812, val auc: 0.5519408
+INFO - 2020/10/22 08:07 -- 0:26:11 - 12th epoch finished, train loss: 0.5140751, train auc: 0.6639219, val loss: 0.3554497, val auc: 0.5521489
+INFO - 2020/10/22 08:09 -- 0:27:23 - 13th epoch finished, train loss: 0.5138905, train auc: 0.6642643, val loss: 0.3564274, val auc: 0.5523254
+INFO - 2020/10/22 08:10 -- 0:28:36 - 14th epoch finished, train loss: 0.5135444, train auc: 0.6645481, val loss: 0.3591988, val auc: 0.5526195
+INFO - 2020/10/22 08:11 -- 0:29:50 - 15th epoch finished, train loss: 0.513197, train auc: 0.6649563, val loss: 0.3547345, val auc: 0.5529741
+INFO - 2020/10/22 08:12 -- 0:31:03 - 16th epoch finished, train loss: 0.5128117, train auc: 0.6653178, val loss: 0.3425734, val auc: 0.5533497
+INFO - 2020/10/22 08:14 -- 0:32:15 - 17th epoch finished, train loss: 0.512532, train auc: 0.6658355, val loss: 0.352841, val auc: 0.5538019
+INFO - 2020/10/22 08:15 -- 0:33:28 - 18th epoch finished, train loss: 0.5122278, train auc: 0.6664629, val loss: 0.3673033, val auc: 0.5543976
+INFO - 2020/10/22 08:16 -- 0:34:42 - 19th epoch finished, train loss: 0.5119652, train auc: 0.6669732, val loss: 0.3555986, val auc: 0.555051
+INFO - 2020/10/22 08:17 -- 0:35:58 - 20th epoch finished, train loss: 0.5116474, train auc: 0.6679953, val loss: 0.3473541, val auc: 0.5557792
+INFO - 2020/10/22 08:18 -- 0:37:13 - 21th epoch finished, train loss: 0.511282, train auc: 0.668857, val loss: 0.356407, val auc: 0.5565596
+INFO - 2020/10/22 08:20 -- 0:38:26 - 22th epoch finished, train loss: 0.5109344, train auc: 0.6699423, val loss: 0.3633635, val auc: 0.5574433
+INFO - 2020/10/22 08:21 -- 0:39:44 - 23th epoch finished, train loss: 0.5103877, train auc: 0.6710868, val loss: 0.3387877, val auc: 0.5584957
+INFO - 2020/10/22 08:22 -- 0:41:02 - 24th epoch finished, train loss: 0.5100141, train auc: 0.6724119, val loss: 0.3491614, val auc: 0.5595397
+INFO - 2020/10/22 08:24 -- 0:42:19 - 25th epoch finished, train loss: 0.5095305, train auc: 0.6741032, val loss: 0.3579758, val auc: 0.5606513
+INFO - 2020/10/22 08:25 -- 0:43:31 - 26th epoch finished, train loss: 0.5088892, train auc: 0.6761081, val loss: 0.3486131, val auc: 0.5629042
+INFO - 2020/10/22 08:26 -- 0:44:43 - 27th epoch finished, train loss: 0.5083772, train auc: 0.6779318, val loss: 0.3610544, val auc: 0.5631498
+INFO - 2020/10/22 08:27 -- 0:46:02 - 28th epoch finished, train loss: 0.50778, train auc: 0.6791308, val loss: 0.3594791, val auc: 0.5637675
+INFO - 2020/10/22 08:29 -- 0:47:15 - 29th epoch finished, train loss: 0.5073273, train auc: 0.6804254, val loss: 0.3611438, val auc: 0.5642849
+INFO - 2020/10/22 08:30 -- 0:48:29 - 30th epoch finished, train loss: 0.5065562, train auc: 0.681949, val loss: 0.3433095, val auc: 0.5653432
+INFO - 2020/10/22 08:31 -- 0:49:41 - 31th epoch finished, train loss: 0.5059116, train auc: 0.6840215, val loss: 0.3637496, val auc: 0.5654885
+INFO - 2020/10/22 08:32 -- 0:50:54 - 32th epoch finished, train loss: 0.504977, train auc: 0.6874257, val loss: 0.3342458, val auc: 0.5685517
+INFO - 2020/10/22 08:33 -- 0:52:07 - 33th epoch finished, train loss: 0.5035539, train auc: 0.6931316, val loss: 0.3378498, val auc: 0.5698031
+INFO - 2020/10/22 08:35 -- 0:53:19 - 34th epoch finished, train loss: 0.5026908, train auc: 0.6948175, val loss: 0.3461987, val auc: 0.5709475
+INFO - 2020/10/22 08:36 -- 0:54:32 - 35th epoch finished, train loss: 0.5018463, train auc: 0.6979494, val loss: 0.3471352, val auc: 0.5745089
+INFO - 2020/10/22 08:37 -- 0:55:46 - 36th epoch finished, train loss: 0.5006542, train auc: 0.7004812, val loss: 0.3329388, val auc: 0.5781833
+INFO - 2020/10/22 08:38 -- 0:56:59 - 37th epoch finished, train loss: 0.4997102, train auc: 0.7032481, val loss: 0.3431838, val auc: 0.5799703
+INFO - 2020/10/22 08:39 -- 0:58:11 - 38th epoch finished, train loss: 0.4990042, train auc: 0.7040441, val loss: 0.3347518, val auc: 0.5813763
+INFO - 2020/10/22 08:41 -- 0:59:25 - 39th epoch finished, train loss: 0.4984947, train auc: 0.7052103, val loss: 0.3625862, val auc: 0.5821579
+INFO - 2020/10/22 08:42 -- 1:00:37 - 40th epoch finished, train loss: 0.4978664, train auc: 0.7065829, val loss: 0.3506584, val auc: 0.5821568
+INFO - 2020/10/22 08:43 -- 1:01:50 - 41th epoch finished, train loss: 0.497333, train auc: 0.7072993, val loss: 0.3678517, val auc: 0.5822728
+INFO - 2020/10/22 08:44 -- 1:03:03 - 42th epoch finished, train loss: 0.4970556, train auc: 0.7075649, val loss: 0.3551737, val auc: 0.5833338
+INFO - 2020/10/22 08:46 -- 1:04:19 - 43th epoch finished, train loss: 0.4965168, train auc: 0.7088971, val loss: 0.3468994, val auc: 0.5844563
+INFO - 2020/10/22 08:47 -- 1:05:38 - 44th epoch finished, train loss: 0.4961817, train auc: 0.7096298, val loss: 0.3546103, val auc: 0.5841178
+INFO - 2020/10/22 08:48 -- 1:06:56 - 45th epoch finished, train loss: 0.4958745, train auc: 0.7102485, val loss: 0.3478945, val auc: 0.5844228
+INFO - 2020/10/22 08:50 -- 1:08:22 - 46th epoch finished, train loss: 0.4955801, train auc: 0.7109187, val loss: 0.3576994, val auc: 0.5851819
+INFO - 2020/10/22 08:51 -- 1:09:39 - 47th epoch finished, train loss: 0.4951471, train auc: 0.7115792, val loss: 0.3450453, val auc: 0.5849586
+INFO - 2020/10/22 08:52 -- 1:10:56 - 48th epoch finished, train loss: 0.4949841, train auc: 0.7120923, val loss: 0.3588503, val auc: 0.5854269
+INFO - 2020/10/22 08:54 -- 1:12:15 - 49th epoch finished, train loss: 0.494703, train auc: 0.7125512, val loss: 0.3469712, val auc: 0.5859373
+INFO - 2020/10/22 08:55 -- 1:13:32 - 50th epoch finished, train loss: 0.4944739, train auc: 0.7129063, val loss: 0.3704305, val auc: 0.5864839
+INFO - 2020/10/22 08:56 -- 1:14:48 - 51th epoch finished, train loss: 0.4942821, train auc: 0.7133368, val loss: 0.36609, val auc: 0.5867493
+INFO - 2020/10/22 08:57 -- 1:16:04 - 52th epoch finished, train loss: 0.4941278, train auc: 0.7134496, val loss: 0.352858, val auc: 0.5868679
+INFO - 2020/10/22 08:59 -- 1:17:17 - 53th epoch finished, train loss: 0.4939661, train auc: 0.7140217, val loss: 0.3647599, val auc: 0.5876386
+INFO - 2020/10/22 09:00 -- 1:18:38 - 54th epoch finished, train loss: 0.4937613, train auc: 0.7144126, val loss: 0.370882, val auc: 0.5871313
+INFO - 2020/10/22 09:01 -- 1:19:56 - 55th epoch finished, train loss: 0.4934733, train auc: 0.7146631, val loss: 0.3528253, val auc: 0.587444
+INFO - 2020/10/22 09:02 -- 1:21:12 - 56th epoch finished, train loss: 0.4934332, train auc: 0.7149657, val loss: 0.358466, val auc: 0.5878173
+INFO - 2020/10/22 09:04 -- 1:22:29 - 57th epoch finished, train loss: 0.4931964, train auc: 0.7152759, val loss: 0.354777, val auc: 0.5875375
+INFO - 2020/10/22 09:05 -- 1:23:43 - 58th epoch finished, train loss: 0.4930645, train auc: 0.715515, val loss: 0.3526665, val auc: 0.5877171
+INFO - 2020/10/22 09:06 -- 1:24:58 - 59th epoch finished, train loss: 0.4930363, train auc: 0.7156849, val loss: 0.3631698, val auc: 0.5879439
+INFO - 2020/10/22 09:07 -- 1:26:12 - 60th epoch finished, train loss: 0.4928366, train auc: 0.716071, val loss: 0.3615924, val auc: 0.5882969
+INFO - 2020/10/22 09:09 -- 1:27:24 - 61th epoch finished, train loss: 0.4928265, train auc: 0.7161922, val loss: 0.3678101, val auc: 0.5881304
+INFO - 2020/10/22 09:10 -- 1:28:40 - 62th epoch finished, train loss: 0.49268, train auc: 0.7164406, val loss: 0.3620419, val auc: 0.5888296
+INFO - 2020/10/22 09:11 -- 1:29:56 - 63th epoch finished, train loss: 0.4925221, train auc: 0.7166136, val loss: 0.3627816, val auc: 0.5885107
+INFO - 2020/10/22 09:12 -- 1:31:13 - 64th epoch finished, train loss: 0.4924326, train auc: 0.7168209, val loss: 0.3620346, val auc: 0.5884839
+INFO - 2020/10/22 09:14 -- 1:32:33 - 65th epoch finished, train loss: 0.4924095, train auc: 0.7170088, val loss: 0.3607313, val auc: 0.5888983
+INFO - 2020/10/22 09:15 -- 1:33:48 - 66th epoch finished, train loss: 0.4922587, train auc: 0.7172154, val loss: 0.362848, val auc: 0.5886
+INFO - 2020/10/22 09:16 -- 1:35:04 - 67th epoch finished, train loss: 0.492204, train auc: 0.7173403, val loss: 0.3697806, val auc: 0.5890311
+INFO - 2020/10/22 09:18 -- 1:36:19 - 68th epoch finished, train loss: 0.4921673, train auc: 0.7174239, val loss: 0.3650864, val auc: 0.5888824
+INFO - 2020/10/22 09:19 -- 1:37:31 - 69th epoch finished, train loss: 0.4919947, train auc: 0.7176164, val loss: 0.3647781, val auc: 0.5891117
+INFO - 2020/10/22 09:20 -- 1:38:44 - 70th epoch finished, train loss: 0.4920361, train auc: 0.7177198, val loss: 0.3657983, val auc: 0.5892038
+INFO - 2020/10/22 09:21 -- 1:39:56 - 71th epoch finished, train loss: 0.4917992, train auc: 0.7178593, val loss: 0.3602087, val auc: 0.5890941
+INFO - 2020/10/22 09:22 -- 1:41:09 - 72th epoch finished, train loss: 0.4918662, train auc: 0.7180026, val loss: 0.3656195, val auc: 0.589281
+INFO - 2020/10/22 09:24 -- 1:42:22 - 73th epoch finished, train loss: 0.4918621, train auc: 0.7181626, val loss: 0.37045, val auc: 0.5896784
+INFO - 2020/10/22 09:25 -- 1:43:35 - 74th epoch finished, train loss: 0.4916469, train auc: 0.7182608, val loss: 0.3608185, val auc: 0.5895672
+INFO - 2020/10/22 09:26 -- 1:44:47 - 75th epoch finished, train loss: 0.4916283, train auc: 0.7183934, val loss: 0.3697769, val auc: 0.5896005
+INFO - 2020/10/22 09:27 -- 1:46:00 - 76th epoch finished, train loss: 0.4916004, train auc: 0.7185153, val loss: 0.3663025, val auc: 0.5896131
+INFO - 2020/10/22 09:28 -- 1:47:12 - 77th epoch finished, train loss: 0.4914743, train auc: 0.7186256, val loss: 0.3657341, val auc: 0.5896268
+INFO - 2020/10/22 09:30 -- 1:48:25 - 78th epoch finished, train loss: 0.4914535, train auc: 0.7187379, val loss: 0.3655916, val auc: 0.5895747
+INFO - 2020/10/22 09:31 -- 1:49:38 - 79th epoch finished, train loss: 0.4914421, train auc: 0.7188469, val loss: 0.3689662, val auc: 0.5897459
+INFO - 2020/10/22 09:32 -- 1:50:50 - 80th epoch finished, train loss: 0.4912566, train auc: 0.718916, val loss: 0.3593365, val auc: 0.5897618
+INFO - 2020/10/22 09:33 -- 1:52:04 - 81th epoch finished, train loss: 0.4912596, train auc: 0.7189992, val loss: 0.3628725, val auc: 0.5898868
+INFO - 2020/10/22 09:35 -- 1:53:16 - 82th epoch finished, train loss: 0.491201, train auc: 0.7191126, val loss: 0.3656954, val auc: 0.5900109
+INFO - 2020/10/22 09:36 -- 1:54:28 - 83th epoch finished, train loss: 0.4911681, train auc: 0.7191198, val loss: 0.3639668, val auc: 0.5900555
+INFO - 2020/10/22 09:37 -- 1:55:43 - 84th epoch finished, train loss: 0.4912084, train auc: 0.7192713, val loss: 0.3679268, val auc: 0.5901072
+INFO - 2020/10/22 09:38 -- 1:57:01 - 85th epoch finished, train loss: 0.4910678, train auc: 0.7193231, val loss: 0.3630815, val auc: 0.589995
+INFO - 2020/10/22 09:40 -- 1:58:20 - 86th epoch finished, train loss: 0.4910154, train auc: 0.719414, val loss: 0.3618917, val auc: 0.5901158
+INFO - 2020/10/22 09:41 -- 1:59:36 - 87th epoch finished, train loss: 0.4910111, train auc: 0.7194906, val loss: 0.3608133, val auc: 0.5901706
+INFO - 2020/10/22 09:42 -- 2:00:49 - 88th epoch finished, train loss: 0.4910446, train auc: 0.7195503, val loss: 0.3671476, val auc: 0.5903881
+INFO - 2020/10/22 09:43 -- 2:02:04 - 89th epoch finished, train loss: 0.4909291, train auc: 0.7195413, val loss: 0.3676684, val auc: 0.5900932
+INFO - 2020/10/22 09:45 -- 2:03:18 - 90th epoch finished, train loss: 0.4909491, train auc: 0.7196769, val loss: 0.3641094, val auc: 0.5903198
+INFO - 2020/10/22 09:46 -- 2:04:30 - 91th epoch finished, train loss: 0.4908709, train auc: 0.7197524, val loss: 0.364531, val auc: 0.5900825
+INFO - 2020/10/22 09:47 -- 2:05:42 - 92th epoch finished, train loss: 0.4908505, train auc: 0.7197967, val loss: 0.3646503, val auc: 0.590133
+INFO - 2020/10/22 09:48 -- 2:06:57 - 93th epoch finished, train loss: 0.4907902, train auc: 0.7198297, val loss: 0.36283, val auc: 0.5903469
+INFO - 2020/10/22 09:49 -- 2:08:12 - 94th epoch finished, train loss: 0.4908094, train auc: 0.719895, val loss: 0.3632337, val auc: 0.5902878
+INFO - 2020/10/22 09:51 -- 2:09:26 - 95th epoch finished, train loss: 0.4907752, train auc: 0.7199412, val loss: 0.3663244, val auc: 0.5902499
+INFO - 2020/10/22 09:52 -- 2:10:39 - 96th epoch finished, train loss: 0.4906722, train auc: 0.719976, val loss: 0.3666563, val auc: 0.5904571
+INFO - 2020/10/22 09:53 -- 2:11:53 - 97th epoch finished, train loss: 0.490671, train auc: 0.7200374, val loss: 0.3654835, val auc: 0.5903953
+INFO - 2020/10/22 09:54 -- 2:13:08 - 98th epoch finished, train loss: 0.4905705, train auc: 0.7200749, val loss: 0.3604298, val auc: 0.5903518
+INFO - 2020/10/22 09:56 -- 2:14:22 - 99th epoch finished, train loss: 0.490702, train auc: 0.7200996, val loss: 0.367029, val auc: 0.5903496
+INFO - 2020/10/22 09:57 -- 2:15:35 - 100th epoch finished, train loss: 0.4905581, train auc: 0.7201613, val loss: 0.3601579, val auc: 0.5903119
+INFO - 2020/10/22 09:58 -- 2:16:47 - 101th epoch finished, train loss: 0.4905768, train auc: 0.720185, val loss: 0.3624079, val auc: 0.5904181
+INFO - 2020/10/22 09:59 -- 2:18:00 - 102th epoch finished, train loss: 0.4905963, train auc: 0.7202442, val loss: 0.3658112, val auc: 0.5905206
+INFO - 2020/10/22 10:01 -- 2:19:15 - 103th epoch finished, train loss: 0.4905533, train auc: 0.7202936, val loss: 0.3633606, val auc: 0.5904472
+INFO - 2020/10/22 10:02 -- 2:20:28 - 104th epoch finished, train loss: 0.4904335, train auc: 0.7203188, val loss: 0.3637176, val auc: 0.5904429
+INFO - 2020/10/22 10:03 -- 2:21:41 - 105th epoch finished, train loss: 0.4905797, train auc: 0.7203477, val loss: 0.3631844, val auc: 0.5904842
+INFO - 2020/10/22 10:04 -- 2:22:56 - 106th epoch finished, train loss: 0.4903837, train auc: 0.7203824, val loss: 0.3622852, val auc: 0.590458
+INFO - 2020/10/22 10:05 -- 2:24:10 - 107th epoch finished, train loss: 0.4904781, train auc: 0.7204331, val loss: 0.3662594, val auc: 0.5904638
+INFO - 2020/10/22 10:07 -- 2:25:25 - 108th epoch finished, train loss: 0.4904732, train auc: 0.7204874, val loss: 0.3644252, val auc: 0.5906543
+INFO - 2020/10/22 10:08 -- 2:26:39 - 109th epoch finished, train loss: 0.490439, train auc: 0.7205392, val loss: 0.3658179, val auc: 0.5905211
+INFO - 2020/10/22 10:09 -- 2:27:52 - 110th epoch finished, train loss: 0.4904546, train auc: 0.7205648, val loss: 0.3664156, val auc: 0.5906133
+INFO - 2020/10/22 10:10 -- 2:29:08 - 111th epoch finished, train loss: 0.4903681, train auc: 0.7205765, val loss: 0.363633, val auc: 0.5906156
+INFO - 2020/10/22 10:12 -- 2:30:23 - 112th epoch finished, train loss: 0.4904157, train auc: 0.7206105, val loss: 0.3668669, val auc: 0.5907214
+INFO - 2020/10/22 10:13 -- 2:31:37 - 113th epoch finished, train loss: 0.490327, train auc: 0.7206274, val loss: 0.3655861, val auc: 0.5907536
+INFO - 2020/10/22 10:14 -- 2:32:50 - 114th epoch finished, train loss: 0.4903194, train auc: 0.7206596, val loss: 0.3662786, val auc: 0.5905852
+INFO - 2020/10/22 10:15 -- 2:34:02 - 115th epoch finished, train loss: 0.4902922, train auc: 0.7206811, val loss: 0.3634325, val auc: 0.5907641
+INFO - 2020/10/22 10:17 -- 2:35:17 - 116th epoch finished, train loss: 0.490377, train auc: 0.7207028, val loss: 0.3669803, val auc: 0.5908374
+INFO - 2020/10/22 10:18 -- 2:36:29 - 117th epoch finished, train loss: 0.490322, train auc: 0.7207217, val loss: 0.3656191, val auc: 0.5906639
+INFO - 2020/10/22 10:19 -- 2:37:44 - 118th epoch finished, train loss: 0.4903258, train auc: 0.7207558, val loss: 0.3687223, val auc: 0.5907309
+INFO - 2020/10/22 10:20 -- 2:38:59 - 119th epoch finished, train loss: 0.4902054, train auc: 0.7207454, val loss: 0.3630545, val auc: 0.590791
+INFO - 2020/10/22 10:21 -- 2:40:12 - 120th epoch finished, train loss: 0.4903227, train auc: 0.7207814, val loss: 0.3673575, val auc: 0.5907885
+INFO - 2020/10/22 10:23 -- 2:41:25 - 121th epoch finished, train loss: 0.4902629, train auc: 0.720788, val loss: 0.3680668, val auc: 0.590838
+INFO - 2020/10/22 10:24 -- 2:42:40 - 122th epoch finished, train loss: 0.4902557, train auc: 0.7208061, val loss: 0.3678478, val auc: 0.5908242
+INFO - 2020/10/22 10:24 -- 2:42:40 - ======================================================================
+INFO - 2020/10/22 10:24 -- 2:42:40 - Early Stopping triggered after 123 epoches, calculating test accuracy...
+INFO - 2020/10/22 10:24 -- 2:42:41 - Current meomory used before delete train and dev: 22.647976 GB
+INFO - 2020/10/22 10:24 -- 2:42:42 - Current meomory after delete train and dev: 2.444538 GB
+INFO - 2020/10/22 10:25 -- 2:43:58 - test loss:0.3679008, test auc: 0.5875317 .
+INFO - 2020/10/22 10:25 -- 2:43:58 - Saving onnx model...
+INFO - 2020/10/22 10:25 -- 2:44:00 - Final torch model and log file saved directory:
+INFO - 2020/10/22 10:25 -- 2:44:00 - /data1/xuwen/code/deepfm_v32_seq/train_result/2020_1022_074145/
+Epoch     7: reducing learning rate of group 0 to 8.0000e-04.
+Epoch    13: reducing learning rate of group 0 to 6.4000e-04.
+Epoch    19: reducing learning rate of group 0 to 5.1200e-04.
+Epoch    25: reducing learning rate of group 0 to 4.0960e-04.
+Epoch    31: reducing learning rate of group 0 to 3.2768e-04.
+Epoch    37: reducing learning rate of group 0 to 2.6214e-04.
+Epoch    43: reducing learning rate of group 0 to 2.0972e-04.
+Epoch    49: reducing learning rate of group 0 to 1.6777e-04.
+Epoch    55: reducing learning rate of group 0 to 1.3422e-04.
+Epoch    61: reducing learning rate of group 0 to 1.0737e-04.
+Epoch    67: reducing learning rate of group 0 to 8.5899e-05.
+Epoch    73: reducing learning rate of group 0 to 6.8719e-05.
+Epoch    79: reducing learning rate of group 0 to 5.4976e-05.
+Epoch    85: reducing learning rate of group 0 to 4.3980e-05.
+Epoch    91: reducing learning rate of group 0 to 3.5184e-05.
+Epoch    97: reducing learning rate of group 0 to 2.8147e-05.
+Epoch   103: reducing learning rate of group 0 to 2.2518e-05.
+Epoch   109: reducing learning rate of group 0 to 1.8014e-05.
+Epoch   115: reducing learning rate of group 0 to 1.4412e-05.
+Epoch   121: reducing learning rate of group 0 to 1.1529e-05.
+graph(%input : Double(100000:54, 54:1),
+      %1.embedding_cols.0.weight : Float(1234:8, 8:1),
+      %1.embedding_cols.1.weight : Float(397:8, 8:1),
+      %1.embedding_cols.2.weight : Float(2815:8, 8:1),
+      %1.embedding_cols.3.weight : Float(1234:8, 8:1),
+      %1.embedding_cols.4.weight : Float(397:8, 8:1),
+      %1.embedding_seq_detail.weight : Float(1234:8, 8:1),
+      %1.embedding_seq_addf.weight : Float(1234:8, 8:1),
+      %1.embed_FM_1d_sparse_col.0.weight : Float(1234:1, 1:1),
+      %1.embed_FM_1d_sparse_col.1.weight : Float(397:1, 1:1),
+      %1.embed_FM_1d_sparse_col.2.weight : Float(2815:1, 1:1),
+      %1.embed_FM_1d_sparse_col.3.weight : Float(1234:1, 1:1),
+      %1.embed_FM_1d_sparse_col.4.weight : Float(397:1, 1:1),
+      %1.embed_FM_1d_detail.weight : Float(1234:1, 1:1),
+      %1.embed_FM_1d_addf.weight : Float(1234:1, 1:1),
+      %1.fm_linear.weight : Float(27:1, 1:1),
+      %1.fm_bn.weight : Float(1:1),
+      %1.fm_bn.bias : Float(1:1),
+      %1.fm_bn.running_mean : Float(1:1),
+      %1.fm_bn.running_var : Float(1:1),
+      %1.dnn.linear_layers.0.weight : Float(128:83, 83:1),
+      %1.dnn.linear_layers.0.bias : Float(128:1),
+      %1.dnn.linear_layers.1.weight : Float(64:128, 128:1),
+      %1.dnn.linear_layers.1.bias : Float(64:1),
+      %1.dnn.linear_layers.2.weight : Float(32:64, 64:1),
+      %1.dnn.linear_layers.2.bias : Float(32:1),
+      %1.dnn.linear_layers.3.weight : Float(16:32, 32:1),
+      %1.dnn.linear_layers.3.bias : Float(16:1),
+      %1.dnn.bn.0.weight : Float(128:1),
+      %1.dnn.bn.0.bias : Float(128:1),
+      %1.dnn.bn.0.running_mean : Float(128:1),
+      %1.dnn.bn.0.running_var : Float(128:1),
+      %1.dnn.bn.1.weight : Float(64:1),
+      %1.dnn.bn.1.bias : Float(64:1),
+      %1.dnn.bn.1.running_mean : Float(64:1),
+      %1.dnn.bn.1.running_var : Float(64:1),
+      %1.dnn.bn.2.weight : Float(32:1),
+      %1.dnn.bn.2.bias : Float(32:1),
+      %1.dnn.bn.2.running_mean : Float(32:1),
+      %1.dnn.bn.2.running_var : Float(32:1),
+      %1.dnn.bn.3.weight : Float(16:1),
+      %1.dnn.bn.3.bias : Float(16:1),
+      %1.dnn.bn.3.running_mean : Float(16:1),
+      %1.dnn.bn.3.running_var : Float(16:1),
+      %1.dnn_linear.weight : Float(1:16, 16:1),
+      %1.dnn_linear.bias : Float(1:1),
+      %177 : Float(),
+      %178 : Long(1:1)):
+  %53 : Tensor = onnx::Shape(%input)
+  %54 : Tensor = onnx::Constant[value={0}]()
+  %55 : Long() = onnx::Gather[axis=0](%53, %54) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:72:0
+  %56 : Tensor = onnx::Constant[value={0}]()
+  %57 : Double(100000:54) = onnx::Gather[axis=1](%input, %56) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %58 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%57) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %59 : Long(100000:1, 1:1) = onnx::Cast[to=7](%58) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %60 : Float(100000:8, 1:8, 8:1) = onnx::Gather(%1.embedding_cols.0.weight, %59) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %61 : Tensor = onnx::Constant[value={1}]()
+  %62 : Double(100000:54) = onnx::Gather[axis=1](%input, %61) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %63 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%62) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %64 : Long(100000:1, 1:1) = onnx::Cast[to=7](%63) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %65 : Float(100000:8, 1:8, 8:1) = onnx::Gather(%1.embedding_cols.1.weight, %64) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %66 : Tensor = onnx::Constant[value={2}]()
+  %67 : Double(100000:54) = onnx::Gather[axis=1](%input, %66) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %68 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%67) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %69 : Long(100000:1, 1:1) = onnx::Cast[to=7](%68) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %70 : Float(100000:8, 1:8, 8:1) = onnx::Gather(%1.embedding_cols.2.weight, %69) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %71 : Tensor = onnx::Constant[value={3}]()
+  %72 : Double(100000:54) = onnx::Gather[axis=1](%input, %71) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %73 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%72) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %74 : Long(100000:1, 1:1) = onnx::Cast[to=7](%73) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %75 : Float(100000:8, 1:8, 8:1) = onnx::Gather(%1.embedding_cols.3.weight, %74) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %76 : Tensor = onnx::Constant[value={4}]()
+  %77 : Double(100000:54) = onnx::Gather[axis=1](%input, %76) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %78 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%77) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %79 : Long(100000:1, 1:1) = onnx::Cast[to=7](%78) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:75:0
+  %80 : Float(100000:8, 1:8, 8:1) = onnx::Gather(%1.embedding_cols.4.weight, %79) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %81 : Tensor = onnx::Constant[value={52}]()
+  %82 : Double(100000:54) = onnx::Gather[axis=1](%input, %81) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:77:0
+  %83 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%82) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:77:0
+  %84 : Long(10:1) = onnx::Constant[value= 32  33  34  35  36  37  38  39  40  41 [ CUDALongType{10} ]]()
+  %85 : Double(100000:10, 10:1) = onnx::Gather[axis=1](%input, %84) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:78:0
+  %86 : Long(100000:10, 10:1) = onnx::Cast[to=7](%85) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:78:0
+  %87 : Float(100000:80, 10:8, 8:1) = onnx::Gather(%1.embedding_seq_detail.weight, %86) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %88 : Float(100000:8, 8:1) = onnx::ReduceSum[axes=[1], keepdims=0](%87) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:79:0
+  %89 : Double(100000:8, 8:1) = onnx::Cast[to=11](%88)
+  %90 : Double(100000:8, 8:1) = onnx::Div(%89, %83) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:80:0
+  %91 : Double(100000:8, 1:8, 8:1) = onnx::Unsqueeze[axes=[1]](%90) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:81:0
+  %92 : Float(100000:8, 1:8, 8:1) = onnx::Cast[to=1](%91) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:81:0
+  %93 : Tensor = onnx::Constant[value={53}]()
+  %94 : Double(100000:54) = onnx::Gather[axis=1](%input, %93) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:84:0
+  %95 : Double(100000:54, 1:1) = onnx::Unsqueeze[axes=[1]](%94) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:84:0
+  %96 : Long(10:1) = onnx::Constant[value= 42  43  44  45  46  47  48  49  50  51 [ CUDALongType{10} ]]()
+  %97 : Double(100000:10, 10:1) = onnx::Gather[axis=1](%input, %96) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:85:0
+  %98 : Long(100000:10, 10:1) = onnx::Cast[to=7](%97) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:85:0
+  %99 : Float(100000:80, 10:8, 8:1) = onnx::Gather(%1.embedding_seq_addf.weight, %98) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %100 : Float(100000:8, 8:1) = onnx::ReduceSum[axes=[1], keepdims=0](%99) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:86:0
+  %101 : Double(100000:8, 8:1) = onnx::Cast[to=11](%100)
+  %102 : Double(100000:8, 8:1) = onnx::Div(%101, %95) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:87:0
+  %103 : Double(100000:8, 1:8, 8:1) = onnx::Unsqueeze[axes=[1]](%102) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:88:0
+  %104 : Float(100000:8, 1:8, 8:1) = onnx::Cast[to=1](%103) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:88:0
+  %105 : Float(100000:56, 7:8, 8:1) = onnx::Concat[axis=1](%60, %65, %70, %75, %80, %92, %104) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:90:0
+  %106 : Long(27:1) = onnx::Constant[value=<Tensor>]()
+  %107 : Double(100000:27, 27:1) = onnx::Gather[axis=1](%input, %106) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:91:0
+  %108 : Float(100000:27, 27:1) = onnx::Cast[to=1](%107) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:91:0
+  %109 : Float(100000:8, 1:8, 8:1) = onnx::ReduceSum[axes=[1], keepdims=1](%105) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:64:0
+  %112 : Float(100000:8, 1:8, 8:1) = onnx::Pow(%109, %177) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:64:0
+  %113 : Float(100000:56, 7:8, 8:1) = onnx::Mul(%105, %105) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:65:0
+  %114 : Float(100000:8, 1:8, 8:1) = onnx::ReduceSum[axes=[1], keepdims=1](%113) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:65:0
+  %115 : Float(100000:8, 1:8, 8:1) = onnx::Sub(%112, %114) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:66:0
+  %116 : Float(100000:1, 1:1) = onnx::ReduceSum[axes=[2], keepdims=0](%115) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:67:0
+  %117 : Float() = onnx::Constant[value={0.5}]()
+  %118 : Float(100000:1, 1:1) = onnx::Mul(%116, %117)
+  %119 : Tensor = onnx::Constant[value={0}]()
+  %120 : Double(100000:54) = onnx::Gather[axis=1](%input, %119) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %121 : Long(100000:1) = onnx::Cast[to=7](%120) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %122 : Float(100000:1, 1:1) = onnx::Gather(%1.embed_FM_1d_sparse_col.0.weight, %121) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %123 : Tensor = onnx::Constant[value={1}]()
+  %124 : Double(100000:54) = onnx::Gather[axis=1](%input, %123) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %125 : Long(100000:1) = onnx::Cast[to=7](%124) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %126 : Float(100000:1, 1:1) = onnx::Gather(%1.embed_FM_1d_sparse_col.1.weight, %125) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %127 : Tensor = onnx::Constant[value={2}]()
+  %128 : Double(100000:54) = onnx::Gather[axis=1](%input, %127) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %129 : Long(100000:1) = onnx::Cast[to=7](%128) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %130 : Float(100000:1, 1:1) = onnx::Gather(%1.embed_FM_1d_sparse_col.2.weight, %129) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %131 : Tensor = onnx::Constant[value={3}]()
+  %132 : Double(100000:54) = onnx::Gather[axis=1](%input, %131) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %133 : Long(100000:1) = onnx::Cast[to=7](%132) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %134 : Float(100000:1, 1:1) = onnx::Gather(%1.embed_FM_1d_sparse_col.3.weight, %133) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %135 : Tensor = onnx::Constant[value={4}]()
+  %136 : Double(100000:54) = onnx::Gather[axis=1](%input, %135) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %137 : Long(100000:1) = onnx::Cast[to=7](%136) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:104:0
+  %138 : Float(100000:1, 1:1) = onnx::Gather(%1.embed_FM_1d_sparse_col.4.weight, %137) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %139 : Float(100000:10, 10:1, 1:1) = onnx::Gather(%1.embed_FM_1d_detail.weight, %86) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %140 : Float(100000:1, 1:1) = onnx::ReduceSum[axes=[1], keepdims=0](%139) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:106:0
+  %141 : Double(100000:1, 1:1) = onnx::Cast[to=11](%140)
+  %142 : Double(100000:1, 1:1) = onnx::Div(%141, %83) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:107:0
+  %143 : Float(100000:1, 1:1) = onnx::Cast[to=1](%142) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:108:0
+  %144 : Float(100000:10, 10:1, 1:1) = onnx::Gather(%1.embed_FM_1d_addf.weight, %98) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1814:0
+  %145 : Float(100000:1, 1:1) = onnx::ReduceSum[axes=[1], keepdims=0](%144) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:110:0
+  %146 : Double(100000:1, 1:1) = onnx::Cast[to=11](%145)
+  %147 : Double(100000:1, 1:1) = onnx::Div(%146, %83) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:111:0
+  %148 : Float(100000:1, 1:1) = onnx::Cast[to=1](%147) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:112:0
+  %149 : Float(100000:7, 7:1) = onnx::Concat[axis=1](%122, %126, %130, %134, %138, %143, %148) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:114:0
+  %150 : Float(100000:1) = onnx::ReduceSum[axes=[1], keepdims=0](%149) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:115:0
+  %151 : Float(100000:1, 1:1) = onnx::Unsqueeze[axes=[1]](%150) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:115:0
+  %152 : Float(100000:1, 1:1) = onnx::MatMul(%108, %1.fm_linear.weight) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:151:0
+  %153 : Float(100000:1, 1:1) = onnx::Add(%118, %152) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:118:0
+  %154 : Float(100000:1, 1:1) = onnx::Add(%153, %151) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:118:0
+  %155 : Float(100000:1, 1:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%154, %1.fm_bn.weight, %1.fm_bn.bias, %1.fm_bn.running_mean, %1.fm_bn.running_var) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:2014:0
+  %157 : Tensor = onnx::Unsqueeze[axes=[0]](%55)
+  %159 : Tensor = onnx::Concat[axis=0](%157, %178)
+  %160 : Float(100000:56, 56:1) = onnx::Reshape(%105, %159) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:124:0
+  %161 : Float(100000:83, 83:1) = onnx::Concat[axis=1](%160, %108) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:127:0
+  %162 : Float(100000:128, 128:1) = onnx::Gemm[alpha=1., beta=1., transB=1](%161, %1.dnn.linear_layers.0.weight, %1.dnn.linear_layers.0.bias) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1674:0
+  %163 : Float(100000:128, 128:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%162, %1.dnn.bn.0.weight, %1.dnn.bn.0.bias, %1.dnn.bn.0.running_mean, %1.dnn.bn.0.running_var) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:2014:0
+  %164 : Float(100000:128, 128:1) = onnx::Relu(%163) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:973:0
+  %165 : Float(100000:64, 64:1) = onnx::Gemm[alpha=1., beta=1., transB=1](%164, %1.dnn.linear_layers.1.weight, %1.dnn.linear_layers.1.bias) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1674:0
+  %166 : Float(100000:64, 64:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%165, %1.dnn.bn.1.weight, %1.dnn.bn.1.bias, %1.dnn.bn.1.running_mean, %1.dnn.bn.1.running_var) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:2014:0
+  %167 : Float(100000:64, 64:1) = onnx::Relu(%166) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:973:0
+  %168 : Float(100000:32, 32:1) = onnx::Gemm[alpha=1., beta=1., transB=1](%167, %1.dnn.linear_layers.2.weight, %1.dnn.linear_layers.2.bias) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1674:0
+  %169 : Float(100000:32, 32:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%168, %1.dnn.bn.2.weight, %1.dnn.bn.2.bias, %1.dnn.bn.2.running_mean, %1.dnn.bn.2.running_var) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:2014:0
+  %170 : Float(100000:32, 32:1) = onnx::Relu(%169) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:973:0
+  %171 : Float(100000:16, 16:1) = onnx::Gemm[alpha=1., beta=1., transB=1](%170, %1.dnn.linear_layers.3.weight, %1.dnn.linear_layers.3.bias) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1674:0
+  %172 : Float(100000:16, 16:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%171, %1.dnn.bn.3.weight, %1.dnn.bn.3.bias, %1.dnn.bn.3.running_mean, %1.dnn.bn.3.running_var) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:2014:0
+  %173 : Float(100000:16, 16:1) = onnx::Relu(%172) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:973:0
+  %174 : Float(100000:1, 1:1) = onnx::Gemm[alpha=1., beta=1., transB=1](%173, %1.dnn_linear.weight, %1.dnn_linear.bias) # /usr/local/lib/python3.8/dist-packages/torch/nn/functional.py:1674:0
+  %175 : Float(100000:1, 1:1) = onnx::Add(%155, %174) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:137:0
+  %score : Float(100000:1, 1:1) = onnx::Sigmoid(%175) # /data1/xuwen/code/deepfm_v32_seq/models/DeepFM.py:138:0
+  return (%score)
+
